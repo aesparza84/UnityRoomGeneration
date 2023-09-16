@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RoomSpawner : MonoBehaviour
 {
-    public Transform[] entryPoints;
+    public Transform entryN, entryE, entryS, entryW;
     // Start is called before the first frame update
     void Start()
     {
