@@ -2106,7 +2106,7 @@ GameObject:
   - component: {fileID: 3481294294310447198}
   - component: {fileID: 1165890575552810098}
   m_Layer: 0
-  m_Name: Entrypoint
+  m_Name: W-Entry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4257,6 +4257,7 @@ MonoBehaviour:
   hasE: 0
   hasS: 0
   hasW: 0
+  hasSpawnedRooms: 0
 --- !u!61 &4937254552691734795
 BoxCollider2D:
   m_ObjectHideFlags: 0

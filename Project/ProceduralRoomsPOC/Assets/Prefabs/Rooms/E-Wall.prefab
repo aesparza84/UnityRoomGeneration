@@ -54,6 +54,7 @@ MonoBehaviour:
   hasE: 0
   hasS: 0
   hasW: 0
+  hasSpawnedRooms: 0
 --- !u!61 &3331305544055928355
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2963,7 +2964,7 @@ GameObject:
   - component: {fileID: 3227656480450902408}
   - component: {fileID: 3385694316022055616}
   m_Layer: 0
-  m_Name: Entrypoint
+  m_Name: E-Entry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

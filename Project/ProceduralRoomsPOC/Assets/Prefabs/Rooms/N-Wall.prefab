@@ -54,6 +54,7 @@ MonoBehaviour:
   hasE: 0
   hasS: 0
   hasW: 0
+  hasSpawnedRooms: 0
 --- !u!50 &3026551286938273422
 Rigidbody2D:
   serializedVersion: 4
@@ -947,7 +948,7 @@ GameObject:
   - component: {fileID: 7438241104911240423}
   - component: {fileID: 7745692021126921569}
   m_Layer: 0
-  m_Name: Entrypoint
+  m_Name: N-Entry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

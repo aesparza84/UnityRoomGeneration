@@ -54,6 +54,7 @@ MonoBehaviour:
   hasE: 0
   hasS: 0
   hasW: 0
+  hasSpawnedRooms: 0
 --- !u!61 &1667729026012426620
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -695,7 +696,7 @@ GameObject:
   - component: {fileID: 5587339388444314671}
   - component: {fileID: 2101028640050298815}
   m_Layer: 0
-  m_Name: Entrypoint
+  m_Name: E-Entry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -921,7 +922,7 @@ GameObject:
   - component: {fileID: 5587339388465182396}
   - component: {fileID: 362685126098641947}
   m_Layer: 0
-  m_Name: Entrypoint (1)
+  m_Name: N-Entry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4291,7 +4292,7 @@ GameObject:
   - component: {fileID: 5587339389969378143}
   - component: {fileID: 1405743451658100844}
   m_Layer: 0
-  m_Name: Entrypoint (2)
+  m_Name: S-Entry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -13,7 +13,7 @@ public class RoomSpawner : MonoBehaviour
 
     void Start()
     {
-        possibleRooms = GameObject.FindGameObjectWithTag("RoomManager").GetComponent<RoomsToAdd>();
+        possibleRooms = GameObject.FindGameObjectWithTag("RoomRefernces").GetComponent<RoomsToAdd>();
         Invoke("checkOpoenings", 1.5f);
         //checkOpoenings();
     }
