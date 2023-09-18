@@ -6,57 +6,80 @@ public class RoomSpawner : MonoBehaviour
 {
     public Transform entryN, entryE, entryS, entryW;
     public bool hasN, hasE, hasS, hasW;
+    static int ID;
 
     private RoomsToAdd possibleRooms;
-    public bool hasSpawnedRooms =false;
-    static int spawnedRooms = 0;
+    public bool functionedCalled =false;
+
+    [SerializeField] private int maxRoomCount;
+    
 
     void Start()
     {
+        ID++;
+        Debug.Log("ID: "+ID+" instantiated");
         possibleRooms = GameObject.FindGameObjectWithTag("RoomRefernces").GetComponent<RoomsToAdd>();
-        Invoke("checkOpoenings", 1.5f);
-        //checkOpoenings();
-    }
-
-
-    void Update()
-    {
-        //Debug.Log("Has N: " + hasN);
-        //Debug.Log("Has E: " + hasE);
-        //Debug.Log("Has S: " + hasS);
-        //Debug.Log("Has W: " + hasW);
-        Debug.Log("Room count: "+spawnedRooms);
+        Invoke("checkOpoenings", 1.0f);
     }
 
     private void checkOpoenings()
     {
-        if (spawnedRooms < 4 && !hasSpawnedRooms)
+        if (RoomManager.spawnedRooms < RoomManager.minRooms && !functionedCalled)
         {
             if (entryN != null)
             {
                 hasN = true;
-
                 GameObject n = Instantiate(possibleRooms.NorthRooms[getRandomElement(possibleRooms.NorthRooms)], entryN.position, Quaternion.identity);
+                RoomManager.addRoom(n);
             }
             if (entryE != null)
             {
                 hasE = true;
                 GameObject n = Instantiate(possibleRooms.EastRooms[getRandomElement(possibleRooms.EastRooms)], entryE.position, Quaternion.identity);
+                RoomManager.addRoom(n);
             }
             if (entryS != null)
             {
                 hasS = true;
                 GameObject n = Instantiate(possibleRooms.SouthRooms[getRandomElement(possibleRooms.SouthRooms)], entryS.position, Quaternion.identity);
+                RoomManager.addRoom(n);
             }
             if (entryW != null)
             {
                 hasW = true;
                 GameObject n = Instantiate(possibleRooms.WestRooms[getRandomElement(possibleRooms.WestRooms)], entryW.position, Quaternion.identity);
+                RoomManager.addRoom(n);
             }
-            spawnedRooms++;
-            hasSpawnedRooms = true;
         }
-        
+
+        //Closes off any openings after desired room count is reached
+        if (RoomManager.spawnedRooms >= RoomManager.minRooms)
+        {
+            if (entryN != null)
+            {
+                GameObject n = Instantiate(possibleRooms.ClosingNorth, entryN.position, Quaternion.identity);
+                RoomManager.addRoom(n);
+            }
+            if (entryE != null)
+            {
+                GameObject n = Instantiate(possibleRooms.ClosingEast, entryE.position, Quaternion.identity);
+                RoomManager.addRoom(n);
+
+            }
+            if (entryS != null)
+            {
+                GameObject n = Instantiate(possibleRooms.ClosingSouth, entryS.position, Quaternion.identity);
+                RoomManager.addRoom(n);
+            }
+            if (entryW != null)
+            {
+                GameObject n = Instantiate(possibleRooms.ClosingWest, entryW.position, Quaternion.identity);
+                RoomManager.addRoom(n);
+            }
+        }
+        functionedCalled = true;
+        Debug.Log("Done");
+
     }
 
     private int getRandomElement(GameObject[] n)
@@ -67,11 +90,14 @@ public class RoomSpawner : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D coll)
     {
-        //Debug.Log(gameObject.name +" is hitting "+coll.name);
+        //check if other entrypoints are collding with the Center
+
+        Debug.Log(coll.gameObject.name+" is whats detected; from "+gameObject.name);
         if (coll != null)
         {
-            RoomSpawner s = coll.GetComponent<RoomSpawner>();
-            s.hasSpawnedRooms = true;
+            Destroy(coll.gameObject);
         }
+        
+        
     }
 }

@@ -1433,6 +1433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2085457253578128443}
   - component: {fileID: 3369458458986183268}
+  - component: {fileID: 9098819085966321866}
   m_Layer: 0
   m_Name: W-Entry
   m_TagString: Untagged
@@ -1481,6 +1482,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &9098819085966321866
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085457253578128440}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2085457253589039684
 GameObject:
   m_ObjectHideFlags: 0
@@ -2618,6 +2640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2085457254098476104}
   - component: {fileID: 8553501736418380228}
+  - component: {fileID: 4593051780346934274}
   m_Layer: 0
   m_Name: N-Entry
   m_TagString: Untagged
@@ -2666,6 +2689,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &4593051780346934274
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085457254098476105}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2085457254237105073
 GameObject:
   m_ObjectHideFlags: 0
